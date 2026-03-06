@@ -39,4 +39,4 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           port: 22
-          script: /opt/python-service/pythonservice.sh
+          script: /opt/python-service/deploy.sh
