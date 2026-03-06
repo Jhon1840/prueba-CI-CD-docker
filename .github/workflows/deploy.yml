@@ -2,7 +2,8 @@ name: CI-CD IA microservice
 
 on:
   push:
-    branches: [production]
+    branches: [main, production]
+  workflow_dispatch:
 
 jobs:
 
@@ -29,6 +30,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/production'
     runs-on: ubuntu-latest
 
     steps:
