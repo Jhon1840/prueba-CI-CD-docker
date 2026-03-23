@@ -5,5 +5,5 @@ app = FastAPI(title="Python Service")
 @app.get("/")
 
 def health():
-    
-    return {"status": "ok"}
+    variable = int(os.getenv("variable"))
+    return {"status": "ok", "variable": variable}
